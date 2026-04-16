@@ -23,6 +23,9 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: ${{ matrix.ruby-version }}
+      
+      - name: Run tests
+        run: bin/rspec
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
