@@ -1,0 +1,11 @@
+class CreateCalendars < ActiveRecord::Migration[8.1]
+  def change
+    create_table :calendars do |t|
+      t.string :provider_id
+      t.string :label
+      t.references :user_account, null: false, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end
