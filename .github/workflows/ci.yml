@@ -25,7 +25,7 @@ jobs:
           ruby-version: ${{ matrix.ruby-version }}
       
       - name: Run tests
-        run: bin/rspec
+        run: bin/rails spec
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
