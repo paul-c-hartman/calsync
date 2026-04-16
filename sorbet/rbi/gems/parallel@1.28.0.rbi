@@ -66,61 +66,52 @@ module Parallel
     # pkg:gem/parallel#lib/parallel.rb:395
     def add_progress_bar!(job_factory, options); end
 
-    # pkg:gem/parallel#lib/parallel.rb:734
+    # pkg:gem/parallel#lib/parallel.rb:710
     def available_processor_count; end
 
-    # pkg:gem/parallel#lib/parallel.rb:682
+    # pkg:gem/parallel#lib/parallel.rb:658
     def call_with_index(item, index, options, &block); end
 
-    # pkg:gem/parallel#lib/parallel.rb:614
+    # pkg:gem/parallel#lib/parallel.rb:590
     def create_workers(job_factory, options, &block); end
 
     # options is either a Integer or a Hash with :count
     #
-    # pkg:gem/parallel#lib/parallel.rb:672
+    # pkg:gem/parallel#lib/parallel.rb:648
     def extract_count_from_options(options); end
 
-    # pkg:gem/parallel#lib/parallel.rb:700
+    # pkg:gem/parallel#lib/parallel.rb:676
     def instrument_finish(item, index, result, options); end
 
     # yield results in the order of the input items
     # needs to use `options` to store state between executions
     # needs to use `done` index since a nil result would also be valid
     #
-    # pkg:gem/parallel#lib/parallel.rb:709
+    # pkg:gem/parallel#lib/parallel.rb:685
     def instrument_finish_in_order(item, index, result, options); end
 
-    # pkg:gem/parallel#lib/parallel.rb:729
+    # pkg:gem/parallel#lib/parallel.rb:705
     def instrument_start(item, index, options); end
 
     # pkg:gem/parallel#lib/parallel.rb:368
     def physical_processor_count_windows; end
 
-    # pkg:gem/parallel#lib/parallel.rb:648
+    # pkg:gem/parallel#lib/parallel.rb:624
     def process_incoming_jobs(read, write, job_factory, options, &block); end
 
-    # pkg:gem/parallel#lib/parallel.rb:524
-    def ractor_build(use_port); end
-
-    # pkg:gem/parallel#lib/parallel.rb:545
-    def ractor_result(item, index, result, results, results_mutex, options); end
-
-    # pkg:gem/parallel#lib/parallel.rb:550
-    def ractor_stop(ractor); end
-
-    # pkg:gem/parallel#lib/parallel.rb:602
+    # pkg:gem/parallel#lib/parallel.rb:578
     def replace_worker(job_factory, workers, index, options, blk); end
 
     # pkg:gem/parallel#lib/parallel.rb:389
     def run(command); end
 
-    # pkg:gem/parallel#lib/parallel.rb:693
+    # pkg:gem/parallel#lib/parallel.rb:669
     def with_instrumentation(item, index, options); end
 
     # pkg:gem/parallel#lib/parallel.rb:420
     def work_direct(job_factory, options, &block); end
 
-    # pkg:gem/parallel#lib/parallel.rb:554
+    # pkg:gem/parallel#lib/parallel.rb:530
     def work_in_processes(job_factory, options, &blk); end
 
     # pkg:gem/parallel#lib/parallel.rb:464
@@ -129,7 +120,7 @@ module Parallel
     # pkg:gem/parallel#lib/parallel.rb:439
     def work_in_threads(job_factory, options, &block); end
 
-    # pkg:gem/parallel#lib/parallel.rb:622
+    # pkg:gem/parallel#lib/parallel.rb:598
     def worker(job_factory, options, &block); end
   end
 end
