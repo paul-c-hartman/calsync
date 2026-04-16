@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe User do
   it 'has many user_accounts' do
     association = described_class.reflect_on_association(:user_accounts)
     expect(association.macro).to eq(:has_many)

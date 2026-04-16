@@ -5,7 +5,7 @@ class FlowFilter < ApplicationRecord
 
   belongs_to :flow
 
-  validates_presence_of :flow, :field_name
+  validates_presence_of :flow, :field_name, :operator
   validate :value_required_for_non_blank_operators
 
   private

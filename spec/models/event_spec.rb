@@ -2,13 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Event, type: :model do
-  def create_calendar!
-    user = User.create!(display_name: 'Test User')
-    account = UserAccount.create!(user: user, email: 'test@example.com', provider: 'google')
-    Calendar.create!(user_account: account, provider_id: 'calendar-1')
-  end
-
+RSpec.describe Event do
   it 'belongs to calendar' do
     association = described_class.reflect_on_association(:calendar)
     expect(association.macro).to eq(:belongs_to)
@@ -44,7 +38,7 @@ RSpec.describe Event, type: :model do
   it 'uses expected defaults for all_day and busy' do
     event = described_class.new
 
-    expect(event.all_day).to eq(false)
-    expect(event.busy).to eq(true)
+    expect(event.all_day).to be(false)
+    expect(event.busy).to be(true)
   end
 end

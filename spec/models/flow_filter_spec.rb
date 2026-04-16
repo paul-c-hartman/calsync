@@ -2,15 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe FlowFilter, type: :model do
-  def create_flow!
-    user = User.create!(display_name: 'Filter User')
-    account = UserAccount.create!(user: user, email: 'filter@example.com', provider: 'google')
-    source = Calendar.create!(user_account: account, provider_id: 'source-filter')
-    destination = Calendar.create!(user_account: account, provider_id: 'destination-filter')
-    Flow.create!(user: user, source: source, destination: destination)
-  end
-
+RSpec.describe FlowFilter do
   it 'belongs to flow' do
     association = described_class.reflect_on_association(:flow)
     expect(association.macro).to eq(:belongs_to)

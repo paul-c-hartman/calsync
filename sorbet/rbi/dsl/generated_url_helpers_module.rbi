@@ -10,10 +10,76 @@ module GeneratedUrlHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def calendar_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def calendars_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_calendar_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_filter_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_transform_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_user_account_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_filter_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_filters_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_transform_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_transforms_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flows_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_calendar_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_filter_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_transform_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_source_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_user_account_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def pages_about_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def pages_home_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rails_blob_representation_proxy_url(*args); end
@@ -94,6 +160,9 @@ module GeneratedUrlHelpersModule
   def rails_storage_redirect_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def root_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def turbo_recede_historical_location_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -104,4 +173,16 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def update_rails_disk_service_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_account_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_accounts_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def users_url(*args); end
 end

@@ -2,15 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe FlowTransform, type: :model do
-  def create_flow!
-    user = User.create!(display_name: 'Transform User')
-    account = UserAccount.create!(user: user, email: 'transform@example.com', provider: 'google')
-    source = Calendar.create!(user_account: account, provider_id: 'source-transform')
-    destination = Calendar.create!(user_account: account, provider_id: 'destination-transform')
-    Flow.create!(user: user, source: source, destination: destination)
-  end
-
+RSpec.describe FlowTransform do
   it 'belongs to flow' do
     association = described_class.reflect_on_association(:flow)
     expect(association.macro).to eq(:belongs_to)
@@ -18,8 +10,8 @@ RSpec.describe FlowTransform, type: :model do
 
   it 'defines expected action enum values' do
     expect(described_class.actions).to eq(
-      'set' => 0,
-      'clear' => 1,
+      'clear' => 0,
+      'set' => 1,
       'append' => 2,
       'prepend' => 3
     )

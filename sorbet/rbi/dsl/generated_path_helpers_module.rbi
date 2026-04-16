@@ -10,10 +10,76 @@ module GeneratedPathHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def calendar_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def calendars_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_calendar_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_filter_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_flow_transform_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_user_account_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_filter_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_filters_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_transform_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flow_transforms_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def flows_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_calendar_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_filter_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_flow_transform_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_source_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_user_account_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def pages_about_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def pages_home_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rails_blob_path(*args); end
@@ -94,6 +160,9 @@ module GeneratedPathHelpersModule
   def rails_storage_redirect_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def root_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def turbo_recede_historical_location_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -104,4 +173,16 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def update_rails_disk_service_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_account_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_accounts_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def users_path(*args); end
 end

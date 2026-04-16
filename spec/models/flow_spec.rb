@@ -2,13 +2,13 @@
 
 require 'rails_helper'
 
-RSpec.describe Flow, type: :model do
-  def build_calendar_for(user, provider_id)
+RSpec.describe Flow do
+  define_method(:build_calendar_for) do |user, provider_id|
     account = UserAccount.create!(user: user, email: "#{provider_id}@example.com", provider: 'google')
     Calendar.create!(user_account: account, provider_id: provider_id)
   end
 
-  it 'belongs to source and destination calendars and user' do
+  it 'belongs to source and destination calendars and user' do # rubocop:disable RSpec/MultipleExpectations
     source_assoc = described_class.reflect_on_association(:source)
     destination_assoc = described_class.reflect_on_association(:destination)
     user_assoc = described_class.reflect_on_association(:user)

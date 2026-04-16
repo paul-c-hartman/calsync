@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Calendar, type: :model do
+RSpec.describe Calendar do
   it 'belongs to user_account' do
     association = described_class.reflect_on_association(:user_account)
     expect(association.macro).to eq(:belongs_to)

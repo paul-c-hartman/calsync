@@ -3,7 +3,7 @@
 class FlowTransform < ApplicationRecord
   belongs_to :flow
 
-  enum :action, { set: 0, clear: 1, append: 2, prepend: 3 }, validate: true
+  enum :action, { clear: 0, set: 1, append: 2, prepend: 3 }, validate: true
 
   before_validation :set_position, on: :create
 
