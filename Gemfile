@@ -57,7 +57,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Test framework (use Minitest instead: gem "minitest")
-  gem "rspec-rails", "~> 7.0"
+  gem "rspec-rails", "~> 8.0"
   gem "rubocop-rspec", require: false
   gem "rubocop-rspec_rails", require: false
   gem "rspec-sorbet", require: false
