@@ -196,7 +196,7 @@ GEM
     nokogiri (1.19.2-x86_64-linux-musl)
       racc (~> 1.4)
     ostruct (0.6.3)
-    parallel (1.28.0)
+    parallel (2.0.1)
     parlour (9.1.2)
       commander (~> 5.0)
       parser
@@ -353,6 +353,8 @@ GEM
     ruby-vips (2.3.0)
       ffi (~> 1.12)
       logger
+    rubydex (0.1.0.beta12-aarch64-linux)
+    rubydex (0.1.0.beta12-x86_64-linux)
     safe_type (1.1.1)
     securerandom (0.4.1)
     solid_cable (3.0.12)
@@ -371,8 +373,8 @@ GEM
       fugit (~> 1.11)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    sorbet (0.6.13128)
-      sorbet-static (= 0.6.13128)
+    sorbet (0.6.13133)
+      sorbet-static (= 0.6.13133)
     sorbet-coerce (0.7.0)
       polyfill (~> 1.8)
       safe_type (~> 1.1, >= 1.1.1)
@@ -383,12 +385,12 @@ GEM
       parser (>= 2.7)
       sorbet-coerce (>= 0.2.6)
       sorbet-runtime (>= 0.5.9892)
-    sorbet-runtime (0.6.13128)
-    sorbet-static (0.6.13128-aarch64-linux)
-    sorbet-static (0.6.13128-x86_64-linux)
-    sorbet-static-and-runtime (0.6.13128)
-      sorbet (= 0.6.13128)
-      sorbet-runtime (= 0.6.13128)
+    sorbet-runtime (0.6.13133)
+    sorbet-static (0.6.13133-aarch64-linux)
+    sorbet-static (0.6.13133-x86_64-linux)
+    sorbet-static-and-runtime (0.6.13133)
+      sorbet (= 0.6.13133)
+      sorbet-runtime (= 0.6.13133)
     spoom (1.7.12)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -419,18 +421,18 @@ GEM
     tailwindcss-ruby (4.2.2-aarch64-linux-musl)
     tailwindcss-ruby (4.2.2-x86_64-linux-gnu)
     tailwindcss-ruby (4.2.2-x86_64-linux-musl)
-    tapioca (0.18.0)
+    tapioca (0.19.0)
       benchmark
       bundler (>= 2.2.25)
       netrc (>= 0.11.0)
       parallel (>= 1.21.0)
       rbi (>= 0.3.7)
       require-hooks (>= 0.2.2)
+      rubydex (>= 0.1.0.beta10)
       sorbet-static-and-runtime (>= 0.5.11087)
       spoom (>= 1.7.9)
       thor (>= 1.2.0)
       tsort
-      yard-sorbet
     thor (1.5.0)
     thruster (0.1.20)
     thruster (0.1.20-aarch64-linux)
@@ -455,10 +457,6 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    yard (0.9.41)
-    yard-sorbet (0.9.0)
-      sorbet-runtime
-      yard
     zeitwerk (2.7.5)
 
 PLATFORMS
@@ -589,7 +587,7 @@ CHECKSUMS
   nokogiri (1.19.2-x86_64-linux-gnu) sha256=fa8feca882b73e871a9845f3817a72e9734c8e974bdc4fbad6e4bc6e8076b94f
   nokogiri (1.19.2-x86_64-linux-musl) sha256=93128448e61a9383a30baef041bf1f5817e22f297a1d400521e90294445069a8
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
-  parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
+  parallel (2.0.1) sha256=337782d3e39f4121e67563bf91dd8ece67f48923d90698614773a0ec9a5b2c7d
   parlour (9.1.2) sha256=446ce24243e125f0e8c4f9b5722c3b86063d42d8b106c847a7d73a8cc693c382
   parser (3.3.11.1) sha256=d17ace7aabe3e72c3cc94043714be27cc6f852f104d81aa284c2281aecc65d54
   polyfill (1.9.0) sha256=e80a8079b562ac79be648ba50e2ade7b939eddb6298cfd5149b4fbdd5f09442c
@@ -639,18 +637,20 @@ CHECKSUMS
   ruby-lsp-rspec (0.1.29) sha256=798be579723376cd56b17d32373288fb1163e4cfe2024c7d068516a1cf214ee5
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   ruby-vips (2.3.0) sha256=e685ec02c13969912debbd98019e50492e12989282da5f37d05f5471442f5374
+  rubydex (0.1.0.beta12-aarch64-linux) sha256=4ec09c4ecf710a1b522e63d6e5c1506f945719b452dad23db48ece28d911ab25
+  rubydex (0.1.0.beta12-x86_64-linux) sha256=9034afc1ddb612a74c4242f566facc910e16bbde010e5855d6ca45b60d3ef757
   safe_type (1.1.1) sha256=9a57c397d350863c69669e9d197cbf87a67ba6c9396661b5e273f959d2d11ca5
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   solid_cable (3.0.12) sha256=a168a54731a455d5627af48d8441ea3b554b8c1f6e6cd6074109de493e6b0460
   solid_cache (1.0.10) sha256=bc05a2fb3ac78a6f43cbb5946679cf9db67dd30d22939ededc385cb93e120d41
   solid_queue (1.4.0) sha256=e6a18d196f0b27cb6e3c77c5b31258b05fb634f8ed64fb1866ed164047216c2a
-  sorbet (0.6.13128) sha256=58e8d8e576770b44f32db5320c1db0a717471a0ea76121ef625831e7aa066d03
+  sorbet (0.6.13133) sha256=007adb46ffb81b4ef1ae27b2df7688b9e75c546eaa29e911222e9741dec8f932
   sorbet-coerce (0.7.0) sha256=b340fa40971340e946c698a05e7f5c640909480e8024344272c2e763f289c4e5
   sorbet-rails (0.7.34) sha256=1767c95be2ccca007750c0b885c1507266cb86859369f070c2909d21fad708ff
-  sorbet-runtime (0.6.13128) sha256=26fe3e8c6edab187d73ecf2e611eca14d635878cde207b8817a843ad93557910
-  sorbet-static (0.6.13128-aarch64-linux) sha256=c35e5d78ef137a81ef8b8d7f5313891a91b3e200ce9c0371ad956d726e2d6d6d
-  sorbet-static (0.6.13128-x86_64-linux) sha256=49d44775ac84caeffb4217f85bdd2e62f505d71926d3bccd2d87d4aa544ebce0
-  sorbet-static-and-runtime (0.6.13128) sha256=d1df5598851bdc9c82a2f4d31c654ccd6a355fa4b49bd7c58a23253fa7977866
+  sorbet-runtime (0.6.13133) sha256=f910fa20b6cdbe2437e22f897cba6cd89b4bc766dcb1eecc5eefccb2b7fc2c08
+  sorbet-static (0.6.13133-aarch64-linux) sha256=82744a76887941bf763d0a71a3f77f017cb18fa4ebae2003561e3db6dd1ef074
+  sorbet-static (0.6.13133-x86_64-linux) sha256=fb240e31420522011edb693e88b2b19afe7ae4cf709c51eeb3626808a0a186c9
+  sorbet-static-and-runtime (0.6.13133) sha256=10d0a77ce4205b62b2b4c92c0adb71f8d849bf8fc5f01c17191a6df04e14985d
   spoom (1.7.12) sha256=67f0b1f835158dba4f19c03ff75b7b7e285dce9165b7b77c2c78cbf54ebf3013
   sqlite3 (2.9.2-aarch64-linux-gnu) sha256=eeb86db55645b85327ba75129e3614658d974bf4da8fdc87018a0d42c59f6e42
   sqlite3 (2.9.2-aarch64-linux-musl) sha256=4feff91fb8c2b13688da34b5627c9d1ed9cedb3ee87a7114ec82209147f07a6d
@@ -665,7 +665,7 @@ CHECKSUMS
   tailwindcss-ruby (4.2.2-aarch64-linux-musl) sha256=3dbaa653a5e9cddbb6bc73598a566d7172a91724463000cd594624dfe5b0eaec
   tailwindcss-ruby (4.2.2-x86_64-linux-gnu) sha256=7f5e7cdd697ff25600d684cedb4df4a56736633c231ee03c7148992c62fd228f
   tailwindcss-ruby (4.2.2-x86_64-linux-musl) sha256=676b802dafc677983d471f3acf2dddbddea4e978ea0300bfa21ebd6ab167d6a8
-  tapioca (0.18.0) sha256=6e92516b055e727792c84319d4be59438345b2c11e932495a54636fc043e7dc1
+  tapioca (0.19.0) sha256=c519b09d4a0a61c550955bd007afac09fd8a7d5096557cb8ca6ef330393e4a5d
   thor (1.5.0) sha256=e3a9e55fe857e44859ce104a84675ab6e8cd59c650a49106a05f55f136425e73
   thruster (0.1.20) sha256=c05f2fbcae527bbe093a6e6d84fb12d9d680617e7c162325d9b97e8e9d4b5201
   thruster (0.1.20-aarch64-linux) sha256=754f1701061235235165dde31e7a3bc87ec88066a02981ff4241fcda0d76d397
@@ -681,8 +681,6 @@ CHECKSUMS
   web-console (4.3.0) sha256=e13b71301cdfc2093f155b5aa3a622db80b4672d1f2f713119cc7ec7ac6a6da4
   websocket-driver (0.8.0) sha256=ed0dba4b943c22f17f9a734817e808bc84cdce6a7e22045f5315aa57676d4962
   websocket-extensions (0.1.5) sha256=1c6ba63092cda343eb53fc657110c71c754c56484aad42578495227d717a8241
-  yard (0.9.41) sha256=2fad2f362bceb63101f37aeb81d35cfc50b4ae1c11cf22f54b8d46626877a89f
-  yard-sorbet (0.9.0) sha256=03d1aa461b9e9c82b886919a13aa3e09fcf4d1852239d2967ed97e92723ffe21
   zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
 
 BUNDLED WITH
