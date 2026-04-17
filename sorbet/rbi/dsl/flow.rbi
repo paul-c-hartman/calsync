@@ -414,6 +414,20 @@ class Flow
     sig { params(value: T::Enumerable[::FlowFilter]).void }
     def flow_filters=(value); end
 
+    sig { returns(T::Array[T.untyped]) }
+    def flow_transform_ids; end
+
+    sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
+    def flow_transform_ids=(ids); end
+
+    # This method is created by ActiveRecord on the `Flow` class because it declared `has_many :flow_transforms`.
+    # 🔗 [Rails guide for `has_many` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-association)
+    sig { returns(::FlowTransform::PrivateCollectionProxy) }
+    def flow_transforms; end
+
+    sig { params(value: T::Enumerable[::FlowTransform]).void }
+    def flow_transforms=(value); end
+
     sig { returns(T.nilable(::Calendar)) }
     def reload_destination; end
 

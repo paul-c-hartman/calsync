@@ -26,7 +26,13 @@ class ApplicationController
     include ::Importmap::ImportmapTagsHelper
     include ::ActionController::Base::HelperMethods
     include ::ApplicationHelper
-    include ::DeviseHelper
+    include ::CalendarsHelper
+    include ::FlowFiltersHelper
+    include ::FlowTransformsHelper
+    include ::FlowsHelper
+    include ::PagesHelper
+    include ::UserAccountsHelper
+    include ::UsersHelper
   end
 
   class HelperProxy < ::ActionView::Base

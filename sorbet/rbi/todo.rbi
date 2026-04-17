@@ -6,6 +6,7 @@
 
 module ::CI; end
 module ActionMailer::Collector; end
+module Bundler::ConnectionPool::ForkTracker; end
 module Bundler::FetchMetadata; end
 module Bundler::MatchMetadata; end
 module Set::SubclassCompatible; end
