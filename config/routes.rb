@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  direct(:auth) { |provider| "/auth/#{provider}" }
+  get '/login', to: 'sessions#new', as: :login
+  get '/auth/:provider/callback', to: 'sessions#create', as: :auth_callback
+  get '/auth/failure', to: 'sessions#failure', as: :auth_failure
+  delete '/logout', to: 'sessions#destroy', as: :logout
 
   get "pages/home"
   get "pages/about"

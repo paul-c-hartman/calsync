@@ -1,0 +1,8 @@
+<div>
+  <h1>Login</h1>
+  <%- auth_strategies.each do |strategy, name| %>
+    <%= form_tag(auth_url(provider: strategy), method: 'post', data: {turbo: false}) do %>
+      <button type='submit'>Login with <%= name %></button>
+    <% end %>
+  <% end %>
+</div>

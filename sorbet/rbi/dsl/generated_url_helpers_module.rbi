@@ -10,6 +10,15 @@ module GeneratedUrlHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def auth_callback_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def auth_failure_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def auth_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def calendar_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -50,6 +59,12 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def flows_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def login_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def logout_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_calendar_url(*args); end

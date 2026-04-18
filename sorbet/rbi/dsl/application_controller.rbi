@@ -31,8 +31,18 @@ class ApplicationController
     include ::FlowTransformsHelper
     include ::FlowsHelper
     include ::PagesHelper
+    include ::SessionsHelper
     include ::UserAccountsHelper
     include ::UsersHelper
+
+    sig { returns(T.untyped) }
+    def current_user; end
+
+    sig { params(resource: T.untyped).returns(T.untyped) }
+    def require_authentication(resource: T.unsafe(nil)); end
+
+    sig { returns(T.untyped) }
+    def user_signed_in?; end
   end
 
   class HelperProxy < ::ActionView::Base

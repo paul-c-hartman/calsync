@@ -31,6 +31,7 @@ class Rails::Conductor::BaseController
     include ::FlowTransformsHelper
     include ::FlowsHelper
     include ::PagesHelper
+    include ::SessionsHelper
     include ::UserAccountsHelper
     include ::UsersHelper
   end

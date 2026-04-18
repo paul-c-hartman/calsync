@@ -376,10 +376,38 @@ class User
     def calendars=(value); end
 
     sig { returns(T::Array[T.untyped]) }
+    def flow_filter_ids; end
+
+    sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
+    def flow_filter_ids=(ids); end
+
+    # This method is created by ActiveRecord on the `User` class because it declared `has_many :flow_filters, through: :flows`.
+    # 🔗 [Rails guide for `has_many_through` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
+    sig { returns(::FlowFilter::PrivateCollectionProxy) }
+    def flow_filters; end
+
+    sig { params(value: T::Enumerable[::FlowFilter]).void }
+    def flow_filters=(value); end
+
+    sig { returns(T::Array[T.untyped]) }
     def flow_ids; end
 
     sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
     def flow_ids=(ids); end
+
+    sig { returns(T::Array[T.untyped]) }
+    def flow_transform_ids; end
+
+    sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
+    def flow_transform_ids=(ids); end
+
+    # This method is created by ActiveRecord on the `User` class because it declared `has_many :flow_transforms, through: :flows`.
+    # 🔗 [Rails guide for `has_many_through` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
+    sig { returns(::FlowTransform::PrivateCollectionProxy) }
+    def flow_transforms; end
+
+    sig { params(value: T::Enumerable[::FlowTransform]).void }
+    def flow_transforms=(value); end
 
     # This method is created by ActiveRecord on the `User` class because it declared `has_many :flows`.
     # 🔗 [Rails guide for `has_many` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-association)

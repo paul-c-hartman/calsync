@@ -733,9 +733,6 @@ module AbstractController::Collector
   def ttf(*_arg0, **_arg1, &_arg2); end
 
   # pkg:gem/actionpack#lib/abstract_controller/collector.rb:11
-  def turbo_stream(*_arg0, **_arg1, &_arg2); end
-
-  # pkg:gem/actionpack#lib/abstract_controller/collector.rb:11
   def url_encoded_form(*_arg0, **_arg1, &_arg2); end
 
   # pkg:gem/actionpack#lib/abstract_controller/collector.rb:11
@@ -1276,7 +1273,6 @@ class ActionController::API < ::ActionController::Metal
   include ::ActionController::Rescue
   include ::ActionController::Instrumentation
   include ::ActionController::ParamsWrapper
-  include ::Turbo::RequestIdTracking
   extend ::ActionView::ViewPaths::ClassMethods
   extend ::AbstractController::UrlFor::ClassMethods
   extend ::ActionController::Redirecting::ClassMethods
@@ -1313,7 +1309,7 @@ class ActionController::API < ::ActionController::Metal
   def _renderers?; end
 
   # pkg:gem/actionpack#lib/action_controller/api.rb:150
-  def _run_process_action_callbacks(&block); end
+  def _run_process_action_callbacks; end
 
   # pkg:gem/actionpack#lib/action_controller/api.rb:150
   def _run_process_action_callbacks!(&block); end
@@ -2075,10 +2071,6 @@ class ActionController::Base < ::ActionController::Metal
   include ::ActionController::Rescue
   include ::ActionController::Instrumentation
   include ::ActionController::ParamsWrapper
-  include ::Turbo::Native::Navigation
-  include ::Turbo::Frames::FrameRequest
-  include ::Turbo::Streams::TurboStreamsTagBuilder
-  include ::Turbo::RequestIdTracking
   extend ::ActionView::ViewPaths::ClassMethods
   extend ::AbstractController::Helpers::Resolution
   extend ::AbstractController::Helpers::ClassMethods
@@ -2110,7 +2102,6 @@ class ActionController::Base < ::ActionController::Metal
   extend ::ActionController::Rescue::ClassMethods
   extend ::ActionController::Instrumentation::ClassMethods
   extend ::ActionController::ParamsWrapper::ClassMethods
-  extend ::Importmap::Freshness
   extend ::ActionController::Renderers::DeprecatedEscapeJsonResponses
 
   # pkg:gem/actionpack#lib/action_controller/base.rb:292
@@ -2363,9 +2354,6 @@ class ActionController::Base < ::ActionController::Metal
 
   # pkg:gem/actionpack#lib/action_controller/base.rb:278
   def _layout(lookup_context, formats, keys); end
-
-  # pkg:gem/actionpack#lib/action_controller/base.rb:330
-  def _layout_from_proc; end
 
   # pkg:gem/actionpack#lib/action_controller/base.rb:325
   def _protected_ivars; end
@@ -2825,18 +2813,6 @@ end
 
 # pkg:gem/actionpack#lib/action_controller/base.rb:275
 module ActionController::Base::HelperMethods
-  include ::ActionText::ContentHelper
-  include ::ActionText::TagHelper
-  include ::Importmap::ImportmapTagsHelper
-  include ::Turbo::DriveHelper
-  include ::Turbo::FramesHelper
-  include ::Turbo::IncludesHelper
-  include ::Turbo::StreamsHelper
-  include ::ActionView::Helpers::CaptureHelper
-  include ::ActionView::Helpers::OutputSafetyHelper
-  include ::ActionView::Helpers::TagHelper
-  include ::Turbo::Streams::ActionHelper
-
   # pkg:gem/actionpack#lib/action_controller/base.rb:290
   def alert(*_arg0, **_arg1, &_arg2); end
 
@@ -2855,23 +2831,11 @@ module ActionController::Base::HelperMethods
   # pkg:gem/actionpack#lib/action_controller/base.rb:292
   def form_authenticity_token(*_arg0, **_arg1, &_arg2); end
 
-  # pkg:gem/actionpack#lib/action_controller/base.rb:330
-  def hotwire_native_app?(*_arg0, **_arg1, &_arg2); end
-
   # pkg:gem/actionpack#lib/action_controller/base.rb:290
   def notice(*_arg0, **_arg1, &_arg2); end
 
   # pkg:gem/actionpack#lib/action_controller/base.rb:292
   def protect_against_forgery?(*_arg0, **_arg1, &_arg2); end
-
-  # pkg:gem/actionpack#lib/action_controller/base.rb:330
-  def turbo_frame_request?(*_arg0, **_arg1, &_arg2); end
-
-  # pkg:gem/actionpack#lib/action_controller/base.rb:330
-  def turbo_frame_request_id(*_arg0, **_arg1, &_arg2); end
-
-  # pkg:gem/actionpack#lib/action_controller/base.rb:330
-  def turbo_native_app?(*_arg0, **_arg1, &_arg2); end
 
   # pkg:gem/actionpack#lib/action_controller/base.rb:284
   def view_cache_dependencies(*_arg0, **_arg1, &_arg2); end
@@ -16009,8 +15973,8 @@ class ActionDispatch::Request
   include ::ActionDispatch::Http::URL
   include ::ActionDispatch::ContentSecurityPolicy::Request
   include ::Rack::Request::Env
-  include ::ActionDispatch::PermissionsPolicy::Request
   include ::ActionDispatch::RequestCookieMethods
+  include ::ActionDispatch::PermissionsPolicy::Request
   extend ::ActionDispatch::Http::Parameters::ClassMethods
 
   # @return [Request] a new instance of Request
@@ -21661,11 +21625,6 @@ ActionPack::VERSION::STRING = T.let(T.unsafe(nil), String)
 
 # pkg:gem/actionpack#lib/action_pack/gem_version.rb:14
 ActionPack::VERSION::TINY = T.let(T.unsafe(nil), Integer)
-
-module ActionView::RoutingUrlFor
-  include ::ActionDispatch::Routing::PolymorphicRoutes
-  include ::ActionDispatch::Routing::UrlFor
-end
 
 # pkg:gem/actionpack#lib/action_dispatch/http/mime_type.rb:7
 module Mime
